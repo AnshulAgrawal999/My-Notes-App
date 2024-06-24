@@ -16,7 +16,7 @@ const cors = require("cors")  ;
 
 const app = express()  ;
 
-const port = process.env.PORT || 4000  ;
+const port = process.env.PORT || 8000  ;
 
 app.use( cors() )  ;
 
@@ -45,7 +45,6 @@ const options = {
 const swaggerSpec = swaggerJSdoc(options)  ;
 
 app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec))  ;
-
 
 
 app.get("/", (req, res) => {

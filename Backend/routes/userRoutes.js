@@ -148,10 +148,12 @@ UserRouter.post("/login", async (req, res) => {
             { expiresIn: "2d" }
           );
           res.send({ msg: "Login Successfull", token, username });
+
           setTimeout(async () => {
             const Blist = new BListModel({ token });
             await Blist.save();
-          }, 1000 * 60 * 10);
+          }, 1000 * 60 * 30);
+
         } else {
           res.send({ msg: "Wrong Credentials" });
         }
