@@ -4,7 +4,7 @@ import { NOTES_ERROR, NOTES_FETCHING, NOTES_LOADING } from "../actionTypes";
 export const getNotes = (token) => (dispatch) => {
   dispatch({ type: NOTES_LOADING });
   axios
-    .get("https://my-notes-app-1etb.onrender.com/notes", {
+    .get("https://notes-api-hzrj.onrender.com/notes", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -20,7 +20,7 @@ export const getNotes = (token) => (dispatch) => {
 };
 
 export const createNotes = (newNote) => (dispatch) => {
-  return axios.post("https://my-notes-app-1etb.onrender.com/notes/create", newNote, {
+  return axios.post("https://notes-api-hzrj.onrender.com/notes/create", newNote, {
     headers: {
       Authorization: `Bearer ${document.cookie?.split("=")[1]}`,
     },
@@ -28,7 +28,7 @@ export const createNotes = (newNote) => (dispatch) => {
 };
 
 export const EditNotes = (id, body, token) => (dispatch) => {
-  return axios.patch(`https://my-notes-app-1etb.onrender.com/notes/update/${id}`, body, {
+  return axios.patch(`https://notes-api-hzrj.onrender.com/notes/update/${id}`, body, {
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -36,7 +36,7 @@ export const EditNotes = (id, body, token) => (dispatch) => {
 };
 
 export const DeleteNotes = (token, id) => () => {
-  return axios.delete(`https://my-notes-app-1etb.onrender.com/notes/delete/${id}`, {
+  return axios.delete(`https://notes-api-hzrj.onrender.com/notes/delete/${id}`, {
     headers: {
       Authorization: `Bearer ${token}`,
     },
