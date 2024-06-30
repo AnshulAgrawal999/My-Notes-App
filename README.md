@@ -13,7 +13,7 @@ The Keep My-Notes App simplifies the task of creating and managing personalized 
 ## Preview
 
 - Homepage
-<img src="./Frontend/my-notes-app/src/assets/homepage.png" />
+<img src="./Frontend/my-notes-app/src/assets/login.png" />
 
 - Register
 <img src="./Frontend/my-notes-app/src/assets/register.png" />
