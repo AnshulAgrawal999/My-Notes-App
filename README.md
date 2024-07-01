@@ -21,6 +21,9 @@ The Keep My-Notes App simplifies the task of creating and managing personalized 
 - Login
 <img src="./Frontend/my-notes-app/src/assets/login.png" />
 
+- Create Note
+<img src="./Frontend/my-notes-app/src/assets/create note.png" />
+
 - Notes
 <img src="./Frontend/my-notes-app/src/assets/notes.png" />
 
